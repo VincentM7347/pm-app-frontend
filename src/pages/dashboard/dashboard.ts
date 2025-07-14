@@ -5,17 +5,15 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, RouterLink], // CommonModule für *ngFor, RouterLink für Links
+  imports: [CommonModule, RouterLink], 
   templateUrl: './dashboard.html',
-  //styleUrls: ['./dashboard.css'] // Füge eine CSS-Datei für das Styling hinzu
+  styleUrls: ['./dashboard.css']
 })
 export class DashboardComponent {
 
-  // Platzhalter-Daten für die Zusammenfassungskarten
   activeProjectsCount = 5;
   upcomingTasksCount = 12;
 
-  // Platzhalter-Daten für die Liste der letzten Projekte
   recentProjects = [
     {
       name: 'Orbit - Backend Entwicklung',

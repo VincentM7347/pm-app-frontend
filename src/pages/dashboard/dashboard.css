@@ -1,0 +1,101 @@
+
+.dashboard-container {
+  @apply p-4 md:p-8 bg-slate-100 min-h-screen text-slate-800;
+}
+
+.dashboard-header {
+  @apply mb-8;
+}
+
+.dashboard-header h1 {
+  @apply text-3xl font-bold text-slate-900;
+}
+
+.dashboard-header p {
+  @apply text-slate-600;
+}
+
+.summary-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.summary-card {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+.summary-card h3 {
+  @apply font-semibold text-slate-600;
+}
+
+.summary-card .count {
+  @apply text-4xl font-bold my-2;
+}
+
+.summary-card .activity {
+  @apply text-lg my-2;
+}
+
+.summary-card a {
+  @apply text-blue-600 hover:underline;
+}
+
+.main-content-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+}
+
+.section-title {
+  @apply text-xl font-bold mb-4;
+}
+
+.project-section {
+  @apply lg:col-span-2;
+}
+
+.project-list {
+  @apply space-y-4;
+}
+
+.project-card {
+  @apply bg-white p-4 rounded-lg shadow-md;
+}
+
+.project-card h4 {
+  @apply font-bold text-lg;
+}
+
+.project-card .project-description {
+  @apply text-sm text-slate-600 mb-2;
+}
+
+.progress-bar-container {
+  @apply w-full bg-slate-200 rounded-full h-2.5;
+}
+
+.progress-bar {
+  @apply bg-blue-600 h-2.5 rounded-full;
+}
+
+.project-card span {
+  @apply text-sm text-slate-500;
+}
+
+.task-list {
+  @apply bg-white p-4 rounded-lg shadow-md divide-y divide-slate-200;
+}
+
+.task-list li {
+  @apply py-3 flex justify-between items-center;
+}
+
+.task-list .task-info p {
+  @apply font-semibold;
+}
+
+.task-list .task-project-name {
+  @apply text-sm text-slate-500;
+}
+
+.task-list .task-due-date {
+  @apply text-sm bg-slate-200 text-slate-700 px-2 py-1 rounded-full;
+}
+
