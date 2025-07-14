@@ -1,22 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 
-const AUTH_API = 'http://localhost:8080/api/auth/'; 
+import { LoginRequest, LoginResponse } from './auth.interface';
+
+const AUTH_API = 'http://localhost:8080/api/auth/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
-  login(credentials: any): Observable<any> {
-    return this.http.post(AUTH_API + 'login', {
-      username: credentials.username,
-      password: credentials.password
-    }).pipe(
-      tap((response: any) => {
+  login(credentials: LoginRequest): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(AUTH_API + 'login', credentials).pipe(
+      tap((response: LoginResponse) => {
         if (response.token) {
           localStorage.setItem('auth-token', response.token);
         }
@@ -35,4 +34,5 @@ export class AuthService {
   public logout(): void {
     localStorage.removeItem('auth-token');
   }
+
 }
