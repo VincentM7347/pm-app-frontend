@@ -1,22 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
 }
